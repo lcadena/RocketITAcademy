@@ -5,23 +5,12 @@ import java.util.List;
 
 public class Coet {
     public String codiCoet;
-    public int numPropulsors;
-    public int velocitatmax;
+    public int velocitatMax;
     public List<Propulsor> propulsors = new ArrayList<>();
 
-    public Coet(String codiCoet, int numPropulsors) throws Exception {
+    public Coet(String codiCoet) throws Exception {
         if(codiCoet==null) throw new Exception();
-        if(numPropulsors<0) throw new Exception();
         this.codiCoet = codiCoet;
-        this.numPropulsors = numPropulsors;
-    }
-
-    public int getVelocitatmax() {
-        for (Propulsor p : propulsors) {
-            velocitatmax+=p.getPotencia();
-
-        }
-        return velocitatmax;
     }
 
     public void accelerar(int multiple){
@@ -55,7 +44,7 @@ public class Coet {
     }
 
     public int getNumPropulsors() {
-        return numPropulsors;
+        return propulsors.size();
     }
 
     public String getPropulsors() {

@@ -3,13 +3,13 @@ package coet;
 public class Main {
 
     public static void main (String[] args) throws Exception {
-        Coet c1 = new Coet("32WESSDS", 3);
+        Coet c1 = new Coet("32WESSDS");
         c1.addPropulsor(10);
         c1.addPropulsor(30);
         c1.addPropulsor(80);
 
 
-        Coet c2 = new Coet("LDSFJA32", 6);
+        Coet c2 = new Coet("LDSFJA32");
         c2.addPropulsor(30);
         c2.addPropulsor(40);
         c2.addPropulsor(50);
@@ -25,12 +25,13 @@ public class Main {
         System.out.println(c1.getCodiCoet() + ": " + c1.getPropulsors());
         System.out.println(c2.getCodiCoet() + ": " + c2.getPropulsors());
 
-        System.out.println("-----FASE 3-----");
-        System.out.println("Velocitat actual del coet 1: " + c1.getVelocitatmax());
-        System.out.println("Velocitat actual del coet 2: " + c2.getVelocitatmax());
+
 
 
         try {
+            System.out.println("-----FASE 3-----");
+            System.out.println("Velocitat actual del coet 1: " + c1.getVelocitat());
+            System.out.println("Velocitat actual del coet 2: " + c2.getVelocitat());
             System.out.println("Accelerar amb els coets 3 cops");
             c1.accelerar(3);
             c2.accelerar(3);
@@ -51,7 +52,7 @@ public class Main {
         }
 
         try {
-            System.out.println("Accelerar amb els coets 5 cops");
+            System.out.println("Accelerar amb els coets 15 cops");
             c1.accelerar(15);
             c2.accelerar(15);
             printar(c1);
@@ -63,6 +64,7 @@ public class Main {
     }
 
     public static void printar(Coet coet){
-        System.out.println("Velocitat " + coet.getVelocitat());
+        System.out.println("Velocitat: " + coet.getVelocitat());
     }
+
 }
